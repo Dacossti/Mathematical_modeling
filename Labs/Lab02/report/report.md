@@ -182,9 +182,9 @@ savefig("image2.png")
 
 ## Решение
 
-![траектории для случая 1 (Julia)](image/image1.png){ #fig:002 width=70% height=70% }
+![траектории для случая 1 (Julia)](image/image1.jpg){ #fig:002 width=70% height=70% }
 
-![траектории для случая 2 (Julia)](image/image2.png){ #fig:004 width=70% height=70% }
+![траектории для случая 2 (Julia)](image/image2.jpg){ #fig:004 width=70% height=70% }
 
 
 Точка пересечения графиков является точкой пересечения катера и лодки.
