@@ -25,7 +25,6 @@ header-includes:
  - '\makeatother'
 aspectratio: 43
 section-titles: true
-
 ---
 
 # Цели и задачи работы
