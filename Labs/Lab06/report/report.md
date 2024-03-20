@@ -65,10 +65,11 @@ header-includes:
 
 $$
 \begin{equation}
-\frac{dS}{dt}= \begin{cases}
-		-aS, если  $I(t) > I^{*} $ //
-		0, если $I(t) \leq I^{*} $
-\end{cases}
+\frac{dS}{dt}= 
+	\begin{cases}
+		-aS, если  $I(t) > I^{*}$ //
+		0, если $I(t) \leq I^{*}$
+	\end{cases}
 \end{equation}
 $$
 
@@ -78,10 +79,10 @@ $$
 $$
 \begin{equation}
 \frac{dI}{dt} = 
-\begin{cases}
+	\begin{cases}
 		aS- bI, если  $I(t) > I^{*} $ //
 		-bI, если $I(t) \leq I^{*} $
-\end{cases}
+	\end{cases}
 \end{equation}
 $$
 
