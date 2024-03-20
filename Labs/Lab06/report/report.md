@@ -65,10 +65,9 @@ header-includes:
 
 
 \begin{equation}
-\frac{dS}{dt} = 
-\begin{cases}
-		-aS, если  $I(t) > I^{*} $ //
-		0, если $I(t) \leq I^{*} $
+\frac{dS}{dt}= \begin{cases}
+		-aS если  $I(t) > I^{*} $ //
+		0 если $I(t) \leq I^{*} $
 \end{cases}
 \end{equation}
 
