@@ -157,4 +157,4 @@ savefig("image2.png")
 
 # Список литературы
 
-1. [Модель эпидемии(https://hal.science/hal-02509142v4/file/epidemie_ru.pdf)
+1. [Модель эпидемии](https://hal.science/hal-02509142v4/file/epidemie_ru.pdf)
