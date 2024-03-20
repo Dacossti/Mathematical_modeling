@@ -67,8 +67,8 @@ $$
 \begin{equation}
 \frac{dS}{dt}= 
 	\begin{cases}
-		-aS, если  $I(t) > I^{*}$ //
-		0, если $I(t) \leq I^{*}$
+		-aS, & \text{если }  I(t) > I^{*} //
+		0, & \text{если } I(t) \leq I^{*}
 	\end{cases}
 \end{equation}
 $$
@@ -80,8 +80,8 @@ $$
 \begin{equation}
 \frac{dI}{dt} = 
 	\begin{cases}
-		aS- bI, если  $I(t) > I^{*} $ //
-		-bI, если $I(t) \leq I^{*} $
+		aS- bI, & \text{если }  I(t) > I^{*} //
+		-bI, & \text{если } I(t) \leq I^{*}
 	\end{cases}
 \end{equation}
 $$
