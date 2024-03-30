@@ -53,6 +53,7 @@ lolTitle: "Листинги"
 indent: true
 header-includes:
   - \usepackage{indentfirst}
+  - \usepackage{mathtools}
   - \usepackage{float} # keep figures where there are in the text
   - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
@@ -66,8 +67,11 @@ header-includes:
 # Задание
 
 Постройте графики изменения числа особей в каждой из трех групп.
+
 Рассмотрите, как будет протекать эпидемия в случае:
+
 1. если $I(0) \leq I^{*}$
+
 2. если  $I(0) > I^{*}$
 
 # Выполнение лабораторной работы
@@ -85,13 +89,9 @@ $$\frac{dI}{dt} = \begin{cases} aS- bI, & \text{если }  I(t) > I^{\ast}\\\\ 
 
 А скорость изменения выздоравливающих особей (при этом приобретающие иммунитет к болезни)
 
-$$
-\begin{equation}
-	\frac{dR}{dt} = bI
-\end{equation}
-$$
+$$\frac{dR}{dt} = bI$$
 
-:memo: **Note:** Постоянные пропорциональности $a$, $b$ , - это коэффициенты заболеваемости и выздоровления соответственно.
+> :memo: **Note:** Постоянные пропорциональности $a$, $b$ , - это коэффициенты заболеваемости и выздоровления соответственно.
 
 
 ## Задача
@@ -105,14 +105,14 @@ $$
 
 ![Динамика изменения числа людей 1 (Julia)](image/image1.png ){ #fig:001 width=70% }
 
-2. если  $I(0) > I^{\ast} $
+2. если  $I(0) > I^{\ast}$
 
-![Динамика изменения числа людей 2 (Julia)](image/image2.png){ #fig:001 width=70% }
+![Динамика изменения числа людей 2 (Julia)](image/image2.png){ #fig:002 width=70% }
 
 
 ## Код программы (Julia)
 
-```
+```julia
 using Plots
 using DifferentialEquations
 
@@ -156,7 +156,6 @@ sol = solve(prob)
 
 plot(sol, label=["S(t)" "I(t)" "R(t)"], title="Второй случай")
 savefig("image2.png")
-
 ```
 
 # Выводы
