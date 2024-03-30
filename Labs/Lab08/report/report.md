@@ -226,5 +226,3 @@ savefig("image2.png")
 
 ::: {#refs}
 :::
-
-1. [Модель конкуренции двух фирм](https://natural-sciences.ru/ru/article/view?id=14730)
