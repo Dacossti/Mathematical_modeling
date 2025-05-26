@@ -91,17 +91,23 @@ x'' + 9 x = 0
 
 ![Фазовый портрет №1 (Julia)](image/image1.png){ #fig:001 width=70% height=70% }
 
+![Фазовый портрет №1 (OpenModelica)](image/image4.png){ #fig:001 width=70% height=70% }
+
 2. Колебания гармонического осциллятора c затуханием и без действий внешней силы
 
 x'' + 5.5 x' + 4.4 x = 0
 
 ![Фазовый портрет №2 (Julia)](image/image2.png){ #fig:002 width=70% height=70% }
 
+![Фазовый портрет №2 (OpenModelica)](image/image5.png){ #fig:001 width=70% height=70% }
+
 3. Колебания гармонического осциллятора c затуханием и под действием внешней силы
 
 x'' + x' + 6 x = 2cos(0.5t)
 
 ![Фазовый портрет №3 (Julia)](image/image3.png){ #fig:003 width=70% height=70% }
+
+![Фазовый портрет №3 (OpenModelica)](image/image6.png){ #fig:001 width=70% height=70% }
 
 
 ## Код программы (Julia)
