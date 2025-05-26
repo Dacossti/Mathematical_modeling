@@ -114,7 +114,7 @@ using DifferentialEquations
 
 
 #Параметры осциллятора
-#x'' + g* x' + w^2* x = f(t)
+#x'' + g * x' + w^2 * x = f(t)
 #w - частота
 #g - затухание
 
@@ -274,6 +274,91 @@ display(plot(y1, y2, legend=:topright, label= "Фазовый портрет №
 savefig("image3.png")
 
 ```
+
+## Код программы (OpenModelica)
+
+```
+//ПЕРВЫЙ СЛУЧАЙ x'' + 9*x = 0
+model lab4
+
+//Параметры осциллятора
+//x'' + g* x' + w^2* x = f(t)
+//w - частота
+//g - затухание
+
+parameter Real w = 3.0;
+parameter Real g = 0.0;
+
+//Вектор начальных условий x(t0) = x0
+Real x(start=-0.7);
+Real y(start=0.7);
+Real f;
+
+equation
+  der(x) = y;
+  der(y) = -w.* w.* x - g.* y - f;
+  f = 0.0;
+
+end lab4;
+
+```
+
+
+```
+//ТРЕТЬИЙ СЛУЧАЙ x'' + x' + 6* x = 2* cos(0.5*t)
+model lab4
+
+//Параметры осциллятора
+//x'' + g* x' + w^2* x = f(t)
+//w - частота
+//g - затухание
+
+parameter Real w = sqrt(4.4);
+parameter Real g = 5.5;
+
+//Вектор начальных условий x(t0) = x0
+Real x(start=-0.7);
+Real y(start=0.7);
+Real f;
+
+equation
+  der(x) = y;
+  der(y) = -w.* w.* x - g.* y + f;
+  f = 0.0;
+
+end lab4;
+
+```
+
+
+```
+//ТРЕТЬИЙ СЛУЧАЙ x'' + x' + 6* x = 2* cos(0.5*t)
+model lab4
+
+//Параметры осциллятора
+//x'' + g* x' + w^2* x = f(t)
+//w - частота
+//g - затухание
+
+parameter Real w = sqrt(6);
+parameter Real g = 1.0;
+
+//Вектор начальных условий x(t0) = x0
+Real x(start=-0.7);
+Real y(start=0.7);
+Real f;
+
+equation
+  der(x) = y;
+  der(y) = -w.* w.* x - g.* y + f;
+  f = 2* cos(0.5*time);
+
+end lab4;
+
+```
+
+
+
 
 # Выводы
 
