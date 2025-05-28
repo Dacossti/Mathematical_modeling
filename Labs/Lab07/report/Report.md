@@ -100,15 +100,21 @@ $\frac{dn}{dt} = (\alpha_1(t) + \alpha_2(t) n(t)) (N- n(t))$
 
 ![График распространения рекламы №1 (Julia)](image/image1.png){ #fig:001 width=70% }
 
+![График распространения рекламы №1 (OpenModelica)](image/image4.png){ #fig:004 width=70% }
+
 2. $\frac{dn}{dt} = (0.000013 + 0.73 n(t)) (N- n(t))$
 
 ![График распространения рекламы №2 (Julia)](image/image2.png){ #fig:002 width=70% }
+
+![График распространения рекламы №2 (OpenModelica)](image/image5.png){ #fig:005 width=70% }
 
 **Момент времени в который скорость распространения рекламы будет иметь максимальное значение = 0.06216763889523805**
 
 3. $\frac{dn}{dt} = (0.55sin(t) + 0.33\sin(5t) n(t)) (N- n(t))$
 
 ![График распространения рекламы №3 (Julia)](image/image3.png){ #fig:003 width=70% }
+
+![График распространения рекламы №3 (OpenModelica)](image/image6.png){ #fig:006 width=70% }
 
 ## Код программы (Julia)
 
@@ -179,6 +185,62 @@ sol = solve(prob)
 
 plot(sol, xlabel="time", ylabel="Number of buyers", title="График распространения рекламы №3")
 
+```
+
+## Код программы (OpenModelica)
+
+```
+// ПЕРВЫЙ СЛУЧАЙ
+model lab7
+
+parameter Integer N = 756; //максимальное количество людей, которых может заинтересовать товар
+
+parameter Real a1 = 0.73;
+parameter Real a2 = 0.000013;
+
+Real n(start= 17); //количество людей, знающих о товаре в начальный момент времени
+
+equation
+  der(n) = (a1 + a2*n)*(N - n);
+  
+end lab7;
+```
+
+```
+// ВТОРОЙ СЛУЧАЙ
+model lab7
+
+parameter Integer N = 756; //максимальное количество людей, которых может заинтересовать товар
+
+parameter Real a1 = 0.000013;
+parameter Real a2 = 0.73;
+
+Real n(start= 17); //количество людей, знающих о товаре в начальный момент времени
+
+equation
+  der(n) = (a1 + a2*n)*(N - n);
+  
+end lab7;
+```
+
+```
+// ТРЕТИЙ СЛУЧАЙ
+
+model lab7
+
+parameter Integer N = 756; //максимальное количество людей, которых может заинтересовать товар
+
+Real a1;
+Real a2;
+
+Real n(start= 17); //количество людей, знающих о товаре в начальный момент времени
+
+equation
+  der(n) = (a1 + a2*n)*(N - n);
+  a1 = 0.55*sin(time);
+  a2 = 0.33*sin(5*time);
+  
+end lab7;
 ```
 
 # Выводы
