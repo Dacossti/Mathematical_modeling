@@ -146,7 +146,7 @@ $$
 
 Так же построили график с помощью OpenModelica:
 
-![График изменения оборотных средств №1 (OpenModelica)](image/image3.png){ #fig:002 width=70% }
+![График изменения оборотных средств №1 (OpenModelica)](image/image3.png){ #fig:003 width=70% }
 
 - **Случай 2**
 
@@ -160,7 +160,7 @@ $$
 $$
 
 
-![График изменения оборотных средств №2 (Julia)](image/image2.png){ #fig:003 width=70% }
+![График изменения оборотных средств №2 (Julia)](image/image2.png){ #fig:002 width=70% }
 
 Так же построили график с помощью OpenModelica:
 
@@ -217,11 +217,6 @@ function F(du, u, p, t)
     du[2] = (c2/c1)*u[2] - (a2/c1)*u[2]*u[2] - (b/c1)*u[1]*u[2];
 end
 
-M1_0 = 7.7
-M2_0 = 8.8
-t = (0,30);
-M0 = [M1_0, M2_0]; #вектор начальных значений объема оборотных средств M1 и M2
-
 prob = ODEProblem(F, M0, t)
 
 sol = solve(prob)
@@ -235,7 +230,7 @@ savefig("image2.png")
 
 ```julia
 
-#СЛУЧАЙ №1
+// СЛУЧАЙ №1
 
 model lab8
 
@@ -258,13 +253,15 @@ parameter Real c1 = (p_cr-p1)/(tau1*p1);
 parameter Real c2 = (p_cr-p2)/(tau2*p2);
 
 equation
-der(M1) = (c1/c1)*M1 - (a1/c1)*M1*M1 - (b/c1 + 0.00017)*M1*M2;
+der(M1) = M1 - (a1/c1)*M1*M1 - (b/c1)*M1*M2;
 der(M2) = (c2/c1)*M2 - (a2/c1)*M2*M2 - (b/c1)*M1*M2;
 
 end lab8;
+```
 
+```julia
 
-#СЛУЧАЙ №2
+// СЛУЧАЙ №2
 
 model lab8
 

@@ -115,7 +115,7 @@ $$\frac{dR}{dt} = bI$$
 
 ## Код программы (Julia)
 
-```
+```julia
 using Plots
 using DifferentialEquations
 
@@ -163,7 +163,7 @@ savefig("image2.png")
 
 ## Код программы (OpenModelica)
 
-```
+```julia
 // ПЕРВЫЙ СЛУЧАЙ - случай, когда I(0)<=I*
 
 model lab6
@@ -190,7 +190,7 @@ end lab6;
 ```
 
 
-```
+```julia
 // ВТОРОЙ СЛУЧАЙ - случай, когда I(0)>I*
 
 model lab6

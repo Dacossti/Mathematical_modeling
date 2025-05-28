@@ -129,7 +129,7 @@ $$\frac{dy}{dt} = cx(t) - dx(t)y(t)$$
 
 ## Код программы (Julia)
 
-```
+```julia
 using Plots
 using DifferentialEquations
 
@@ -171,7 +171,7 @@ savefig("image3.png")
 
 ## Код программы (OpenModelica)
 
-```
+```julia
 model lab5
 
 parameter Real a= 0.73; //коэффициент естественной смертности хищников

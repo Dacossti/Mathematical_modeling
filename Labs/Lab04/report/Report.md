@@ -112,7 +112,7 @@ x'' + x' + 6 x = 2cos(0.5t)
 
 ## Код программы (Julia)
 
-```
+```julia
 using Plots
 using DifferentialEquations
 
@@ -283,7 +283,7 @@ savefig("image3.png")
 
 ## Код программы (OpenModelica)
 
-```
+```julia
 //ПЕРВЫЙ СЛУЧАЙ x'' + 9*x = 0
 model lab4
 
@@ -310,7 +310,7 @@ end lab4;
 ```
 
 
-```
+```julia
 //ВТОРОЙ СЛУЧАЙ x'' + x' + 6* x = 2* cos(0.5*t)
 model lab4
 
@@ -337,7 +337,7 @@ end lab4;
 ```
 
 
-```
+```julia
 //ТРЕТЬИЙ СЛУЧАЙ x'' + x' + 6* x = 2* cos(0.5*t)
 model lab4
 

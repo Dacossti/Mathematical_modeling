@@ -128,7 +128,7 @@ $$
 
 Далее приведён код на языке Julia, решающий задачу Коши: 
 
-```
+```julia
 using Plots
 using DifferentialEquations
 

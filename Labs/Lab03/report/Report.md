@@ -151,7 +151,7 @@ $$
 
 Далее приведен код программы, написанной на языке Julia.
 
-```
+```julia
 using Plots
 using DifferentialEquations
 using OrdinaryDiffEq
@@ -244,7 +244,7 @@ plot!(sol, vars=(2), linewidth = 2, label = "Численность армии Y
 
 Далее приведен код программы, написанной в OpenModelica.
 
-```
+```julia
 //ПЕРВЫЙ СЛУЧАЙ
 model lab3
 
@@ -271,7 +271,7 @@ end lab3;
 ```
 
 
-```
+```julia
 //ВТОРОЙ СЛУЧАЙ
 model lab3
 

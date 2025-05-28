@@ -189,7 +189,7 @@ plot(sol, xlabel="time", ylabel="Number of buyers", title="График расп
 
 ## Код программы (OpenModelica)
 
-```
+```julia
 // ПЕРВЫЙ СЛУЧАЙ
 model lab7
 
@@ -206,7 +206,7 @@ equation
 end lab7;
 ```
 
-```
+```julia
 // ВТОРОЙ СЛУЧАЙ
 model lab7
 
@@ -223,7 +223,7 @@ equation
 end lab7;
 ```
 
-```
+```julia
 // ТРЕТИЙ СЛУЧАЙ
 
 model lab7
